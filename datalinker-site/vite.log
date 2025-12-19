@@ -1,0 +1,111 @@
+nohup: ignoring input
+
+> datalinker-site@1.0.0 dev
+> vite
+
+
+  vite v2.9.18 dev server running at:
+
+  > Local: http://localhost:3000/
+  > Network: use `--host` to expose
+
+  ready in 216ms.
+
+2:25:03 AM [vite] page reload index.html
+Failed to resolve import "./Footer.css" from "src/components/Footer.tsx". Does the file exist?
+2:30:12 AM [vite] Internal server error: Failed to resolve import "./Footer.css" from "src/components/Footer.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx
+  14 |  }
+  15 |  var _jsxFileName = "/workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx";
+  16 |  import "./Footer.css";
+     |          ^
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+  18 |  const Footer = () => {
+      at formatError (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39080:46)
+      at TransformContext.error (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39076:19)
+      at normalizeUrl (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58365:26)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TransformContext.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58514:57)
+      at async Object.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39317:30)
+      at async doTransform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:50048:29)
+2:30:25 AM [vite] Internal server error: Failed to resolve import "./Footer.css" from "src/components/Footer.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx
+  14 |  }
+  15 |  var _jsxFileName = "/workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx";
+  16 |  import "./Footer.css";
+     |          ^
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+  18 |  const Footer = () => {
+      at formatError (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39080:46)
+      at TransformContext.error (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39076:19)
+      at normalizeUrl (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58365:26)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TransformContext.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58514:57)
+      at async Object.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39317:30)
+      at async doTransform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:50048:29)
+2:33:11 AM [vite] Internal server error: Failed to resolve import "./Footer.css" from "src/components/Footer.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx
+  14 |  }
+  15 |  var _jsxFileName = "/workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx";
+  16 |  import "./Footer.css";
+     |          ^
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+  18 |  const Footer = () => {
+      at formatError (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39080:46)
+      at TransformContext.error (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39076:19)
+      at normalizeUrl (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58365:26)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TransformContext.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58514:57)
+      at async Object.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39317:30)
+      at async doTransform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:50048:29)
+2:35:53 AM [vite] Internal server error: Failed to resolve import "./Footer.css" from "src/components/Footer.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx
+  14 |  }
+  15 |  var _jsxFileName = "/workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx";
+  16 |  import "./Footer.css";
+     |          ^
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+  18 |  const Footer = () => {
+      at formatError (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39080:46)
+      at TransformContext.error (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39076:19)
+      at normalizeUrl (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58365:26)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TransformContext.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58514:57)
+      at async Object.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39317:30)
+      at async doTransform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:50048:29)
+2:36:17 AM [vite] Internal server error: Failed to resolve import "./Footer.css" from "src/components/Footer.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx
+  14 |  }
+  15 |  var _jsxFileName = "/workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx";
+  16 |  import "./Footer.css";
+     |          ^
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+  18 |  const Footer = () => {
+      at formatError (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39080:46)
+      at TransformContext.error (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39076:19)
+      at normalizeUrl (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58365:26)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TransformContext.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58514:57)
+      at async Object.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39317:30)
+      at async doTransform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:50048:29)
+2:36:20 AM [vite] Internal server error: Failed to resolve import "./Footer.css" from "src/components/Footer.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx
+  14 |  }
+  15 |  var _jsxFileName = "/workspaces/site-datalinker/datalinker-site/src/components/Footer.tsx";
+  16 |  import "./Footer.css";
+     |          ^
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+  18 |  const Footer = () => {
+      at formatError (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39080:46)
+      at TransformContext.error (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39076:19)
+      at normalizeUrl (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58365:26)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TransformContext.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:58514:57)
+      at async Object.transform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:39317:30)
+      at async doTransform (/workspaces/site-datalinker/datalinker-site/node_modules/vite/dist/node/chunks/dep-0a035c79.js:50048:29)

@@ -1,0 +1,32 @@
+{
+  "name": "datalinker-site",
+  "version": "1.0.0",
+  "description": "Website for Datalinker company",
+  "main": "src/main.tsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.20.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^1.0.0",
+    "typescript": "^4.9.5",
+    "vite": "^2.6.0"
+  },
+  "keywords": [
+    "datalinker",
+    "website",
+    "react"
+  ],
+  "author": "Datalinker Team",
+  "license": "MIT"
+}
