@@ -345,6 +345,65 @@ table tbody tr:hover {
     color: var(--primary-color);
 }
 
+/* ===== ValueItem (accordion) ===== */
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.value-item {
+    background: #f8fafc;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    border-left: 6px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.value-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: transparent;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.value-btn:focus {
+    outline: 3px solid rgba(37,99,235,0.15);
+}
+
+.value-title {
+    font-size: 0.95rem;
+}
+
+.value-toggle {
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--primary-color);
+}
+
+.value-content {
+    max-height: 0;
+    padding: 0 1.25rem;
+    background: #ffffff;
+    transition: max-height 260ms ease, padding 260ms ease;
+}
+
+.value-item.open .value-content {
+    padding: 0.75rem 1.25rem 1.25rem 1.25rem;
+    max-height: 200px; /* ajustável conforme conteúdo */
+}
+
+.value-content p {
+    margin: 0;
+    color: var(--text-light);
+}
+
 /* Estados atendidos - grid simples */
 .states {
     display: grid;

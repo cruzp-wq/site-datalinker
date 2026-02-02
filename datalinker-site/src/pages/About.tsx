@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const About: React.FC = () => {
     return (
@@ -70,11 +70,30 @@ const About: React.FC = () => {
 
                 <p><strong>Valores:</strong></p>
                 <ul className="values-list">
-                    <li>Compromisso com a saúde pública</li>
-                    <li>Ética e transparência</li>
-                    <li>Excelência técnica</li>
-                    <li>Inovação</li>
-                    <li>Parceria com os municípios</li>
+                    {[
+                        {
+                            title: 'Compromisso com a saúde pública',
+                            desc: 'Apoiamos ações que priorizam o bem‑estar da população, trabalhando para garantir acesso, qualidade e continuidade dos serviços de atenção básica em todas as nossas implantações.'
+                        },
+                        {
+                            title: 'Ética e transparência',
+                            desc: 'Atuamos com integridade, mantendo comunicação clara com gestores e equipes, e documentando processos para auditoria e conformidade com normas públicas.'
+                        },
+                        {
+                            title: 'Excelência técnica',
+                            desc: 'Nossos profissionais são capacitados e seguem boas práticas de infraestrutura, segurança e operação dos sistemas e‑SUS para garantir estabilidade e disponibilidade.'
+                        },
+                        {
+                            title: 'Inovação',
+                            desc: 'Buscamos continuamente melhorias técnicas e de processo, adotando soluções que aumentem eficiência, automação e monitoramento das UBS.'
+                        },
+                        {
+                            title: 'Parceria com os municípios',
+                            desc: 'Trabalhamos lado a lado com secretarias e equipes locais, oferecendo treinamento, transferência de conhecimento e suporte dedicado para sustentabilidade do projeto.'
+                        }
+                    ].map((item, idx) => (
+                        <ValueItem key={idx} index={idx} title={item.title} description={item.desc} />
+                    ))}
                 </ul>
             </section>
         </main>
@@ -82,3 +101,38 @@ const About: React.FC = () => {
 };
 
 export default About;
+
+// -------------------------
+// Componente ValueItem (accordion simples)
+// -------------------------
+interface ValueItemProps {
+    index: number;
+    title: string;
+    description: string;
+}
+
+const ValueItem: React.FC<ValueItemProps> = ({ index, title, description }) => {
+    const [open, setOpen] = useState(false);
+    return (
+        <li className={`value-item ${open ? 'open' : ''}`}>
+            <button
+                className="value-btn"
+                aria-expanded={open}
+                aria-controls={`value-desc-${index}`}
+                onClick={() => setOpen((s) => !s)}
+            >
+                <span className="value-title">{title}</span>
+                <span className="value-toggle">{open ? '−' : '+'}</span>
+            </button>
+
+            <div
+                id={`value-desc-${index}`}
+                className="value-content"
+                role="region"
+                aria-hidden={!open}
+            >
+                <p>{description}</p>
+            </div>
+        </li>
+    );
+};
