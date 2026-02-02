@@ -1,14 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datalinker</title>
-  <script type="module" crossorigin src="/site-datalinker/assets/index.4812c41c.js"></script>
-  <link rel="stylesheet" href="/site-datalinker/assets/index.00ffd5d7.css">
-</head>
-<body>
-    <div id="root"></div>
-    
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Página não encontrada — redirecionando…</title>
+    <script>
+      // Workaround para rotas SPA no GitHub Pages:
+      // busca o index da aplicação e injeta o HTML, preservando a URL solicitada.
+      (function () {
+        var pathname = window.location.pathname;
+        // Ajuste o base se o site for publicado em /site-datalinker/
+        var indexUrl = window.location.origin + '/site-datalinker/';
+
+        fetch(indexUrl)
+          .then(function (r) { return r.text(); })
+          .then(function (html) {
+            document.open();
+            document.write(html);
+            document.close();
+            // substitui o histórico para que a SPA veja a rota correta
+            history.replaceState(null, '', pathname);
+          })
+          .catch(function () {
+            // fallback simples: redireciona para a raiz do site
+            window.location.replace(indexUrl);
+          });
+      })();
+    </script>
+  </head>
+  <body></body>
 </html>
