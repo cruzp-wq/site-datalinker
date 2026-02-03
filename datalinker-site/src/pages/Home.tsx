@@ -6,88 +6,88 @@ interface DataPoint {
 }
 
 const Home: React.FC = () => {
-    // Dados de exemplo para análise
-    const analysisData: DataPoint[] = [
-        { name: 'Janeiro', value: 2400 },
-        { name: 'Fevereiro', value: 1398 },
-        { name: 'Março', value: 9800 },
-        { name: 'Abril', value: 3908 },
-        { name: 'Maio', value: 4800 },
-        { name: 'Junho', value: 3800 },
-    ];
-
-    const totalValue = analysisData.reduce((sum, item) => sum + item.value, 0);
-    const avgValue = Math.round(totalValue / analysisData.length);
+    // Métricas do serviço (exemplares). Ajuste conforme dados reais.
+    const ubsAtendidas = 24;
+    const estadosAtendidos = 4;
+    const projetosAndamento = 1;
 
     return (
         <main className="home-page">
             <section className="hero">
-                <h1>🔗 DataLinker - Análise de Dados em Tempo Real</h1>
-                <p>Integre, analise e visualize seus dados com facilidade</p>
+                <h1>Datalinker — Especialistas em e-SUS para UBS</h1>
+                <p>Implantação, suporte técnico e subida dos sistemas e-SUS para Unidades Básicas de Saúde.</p>
             </section>
 
             <section className="dashboard">
-                <h2>Dashboard de Análise</h2>
-                
+                <h2>Nosso Alcance</h2>
+
                 <div className="metrics">
                     <div className="metric-card">
-                        <h3>Total de Dados</h3>
-                        <p className="metric-value">{totalValue.toLocaleString()}</p>
-                        <p className="metric-label">registros processados</p>
+                        <h3>UBS Atendidas</h3>
+                        <p className="metric-value">{ubsAtendidas}</p>
+                        <p className="metric-label">unidades</p>
                     </div>
                     <div className="metric-card">
-                        <h3>Média Mensal</h3>
-                        <p className="metric-value">{avgValue.toLocaleString()}</p>
-                        <p className="metric-label">por período</p>
+                        <h3>Estados Atendidos</h3>
+                        <p className="metric-value">{estadosAtendidos}</p>
+                        <p className="metric-label">estados</p>
                     </div>
                     <div className="metric-card">
-                        <h3>Fontes Ativas</h3>
-                        <p className="metric-value">12</p>
-                        <p className="metric-label">conexões ativas</p>
+                        <h3>Projetos em Andamento</h3>
+                        <p className="metric-value">{projetosAndamento}</p>
+                        <p className="metric-label">cidades/municípios</p>
                     </div>
                 </div>
 
                 <div className="data-table">
-                    <h3>Dados por Período</h3>
+                    <h3>Nossos Serviços</h3>
                     <table>
                         <thead>
                             <tr>
-                                <th>Período</th>
-                                <th>Valor</th>
-                                <th>Percentual do Total</th>
+                                <th>Serviço</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {analysisData.map((item, index) => (
-                                <tr key={index}>
-                                    <td>{item.name}</td>
-                                    <td>{item.value.toLocaleString()}</td>
-                                    <td>{((item.value / totalValue) * 100).toFixed(1)}%</td>
-                                </tr>
-                            ))}
+                            <tr>
+                                <td>Implantação e-SUS AB</td>
+                                <td>Implantação completa dos sistemas e-SUS para UBS, com configuração e testes.</td>
+                            </tr>
+                            <tr>
+                                <td>Subida de Servidores</td>
+                                <td>Subida e configuração de servidores e infraestrutura para operação estável.</td>
+                            </tr>
+                            <tr>
+                                <td>Suporte Técnico</td>
+                                <td>Suporte remoto e presencial, com manutenção e atualizações contínuas.</td>
+                            </tr>
+                            <tr>
+                                <td>Treinamento</td>
+                                <td>Treinamento básico para equipes locais e transferência de conhecimento.</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
             <section className="features">
-                <h2>Funcionalidades Principais</h2>
+                <h2>Como Atuamos</h2>
                 <div className="features-grid">
                     <div className="feature-item">
-                        <h4>📊 Visualização de Dados</h4>
-                        <p>Gráficos interativos e em tempo real para melhor compreensão dos dados</p>
+                        <h4>� Atuação com UBS e Secretarias</h4>
+                        <p>Trabalhamos junto às equipes locais e gestores municipais para garantir aderência e continuidade.</p>
                     </div>
                     <div className="feature-item">
-                        <h4>🔄 Integração Automática</h4>
-                        <p>Conecte múltiplas fontes de dados com configuração simples</p>
+                        <h4>�️ Infraestrutura e Segurança</h4>
+                        <p>Configuramos servidores com políticas de segurança e backup adequados às normas do MS.</p>
                     </div>
                     <div className="feature-item">
-                        <h4>⚡ Processamento Rápido</h4>
-                        <p>Análise instantânea de grandes volumes de dados</p>
+                        <h4>📈 Expansão e Projetos</h4>
+                        <p>Projetos aprovados para expansão — foco em Parnamirim/RN e novas UBS.</p>
                     </div>
                     <div className="feature-item">
-                        <h4>🔒 Segurança Garantida</h4>
-                        <p>Seus dados protegidos com as melhores práticas de segurança</p>
+                        <h4>🎓 Treinamento e Suporte</h4>
+                        <p>Capacitação das equipes locais para operação independente e suporte contínuo.</p>
                     </div>
                 </div>
             </section>
