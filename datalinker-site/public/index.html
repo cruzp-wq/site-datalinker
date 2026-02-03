@@ -7,6 +7,20 @@
 </head>
 <body>
     <div id="root"></div>
+    <!-- Garantir que, se não houver hash na URL, a aplicação use a rota Home (/#/) -->
+    <script>
+        (function() {
+            try {
+                if (!location.hash || location.hash === '') {
+                    // coloca a rota raiz do HashRouter
+                    location.replace(location.pathname + location.search + '#/');
+                }
+            } catch (e) {
+                // noop
+                console.error(e);
+            }
+        })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

@@ -63,8 +63,9 @@ html, body, #root {
 }
 
 .site-logo {
-    width: 64px;
-    height: 64px;
+    /* usar altura fixa e largura automática para preservar proporção do SVG */
+    height: 128px;
+    width: auto;
     display: block;
 }
 
@@ -566,6 +567,12 @@ table tbody tr:hover {
         text-align: center;
     }
 
+    /* reduzir logo em telas médias */
+    .site-logo {
+        width: 96px;
+        height: 96px;
+    }
+
     .header nav ul {
         gap: 1rem;
         flex-direction: column;
@@ -613,6 +620,12 @@ table tbody tr:hover {
 @media (max-width: 480px) {
     .header h1 {
         font-size: 1.25rem;
+    }
+
+    /* logo ainda menor em dispositivos muito pequenos */
+    .site-logo {
+        width: 56px;
+        height: 56px;
     }
 
     main {
