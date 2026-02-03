@@ -7,7 +7,7 @@ const Header = () => {
             <div className="header-content">
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                     <img src="/site-datalinker/logo.svg" alt="DataLinker" className="site-logo" />
-                    <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--primary-color)' }}>DataLinker</span>
+                    <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--primary-color)' }}>DataLinker</span>
                 </div>
                 <nav>
                     <ul>
