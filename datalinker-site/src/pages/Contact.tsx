@@ -49,15 +49,19 @@ const Contact: React.FC = () => {
                     <div className="info-items">
                         <div className="info-item">
                             <h4>📍 Endereço</h4>
-                            <p>São Paulo, SP - Brasil</p>
+                            <p>Avenida Prudente de Morais, 637, Tirol — Natal, Rio Grande do Norte</p>
                         </div>
                         <div className="info-item">
-                            <h4>📞 Telefone</h4>
-                            <p>+55 (11) 3000-0000</p>
+                            <h4>📞 Contato Principal</h4>
+                            <p>+55 (84) 99752-2344</p>
+                        </div>
+                        <div className="info-item">
+                            <h4>📞 Contato Secundário</h4>
+                            <p>+55 (84) 3473-6765</p>
                         </div>
                         <div className="info-item">
                             <h4>✉️ Email</h4>
-                            <p>contato@datalinker.com</p>
+                            <p>contato@datalinker.com.br</p>
                         </div>
                     </div>
                 </div>
