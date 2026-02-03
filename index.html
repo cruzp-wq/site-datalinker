@@ -9,6 +9,18 @@
 </head>
 <body>
     <div id="root"></div>
+    <!-- Garantir que, se não houver hash na URL, a aplicação use a rota Home (/#/) -->
+    <script>
+        (function() {
+            try {
+                if (!location.hash || location.hash === '') {
+                    location.replace(location.pathname + location.search + '#/');
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        })();
+    </script>
     
 </body>
 </html>
