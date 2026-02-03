@@ -62,6 +62,12 @@ html, body, #root {
     margin: 0;
 }
 
+.site-logo {
+    width: 42px;
+    height: 42px;
+    display: block;
+}
+
 .header nav ul {
     list-style: none;
     display: flex;
@@ -391,12 +397,15 @@ table tbody tr:hover {
     max-height: 0;
     padding: 0 1.25rem;
     background: #ffffff;
-    transition: max-height 260ms ease, padding 260ms ease;
+    transition: max-height 260ms ease, padding 260ms ease, opacity 200ms ease;
+    overflow: hidden;
+    opacity: 0;
 }
 
 .value-item.open .value-content {
     padding: 0.75rem 1.25rem 1.25rem 1.25rem;
     max-height: 200px; /* ajustável conforme conteúdo */
+    opacity: 1;
 }
 
 .value-content p {

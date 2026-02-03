@@ -5,7 +5,10 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header-content">
-                <h1>📊 DataLinker</h1>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                    <img src="/site-datalinker/logo.svg" alt="DataLinker" className="site-logo" />
+                    <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--primary-color)' }}>DataLinker</span>
+                </div>
                 <nav>
                     <ul>
                         <li><Link to="/">Home</Link></li>
