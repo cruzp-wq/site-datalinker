@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface DataPoint {
     name: string;
@@ -90,6 +91,20 @@ const Home: React.FC = () => {
                         <p>Capacitação das equipes locais para operação independente e suporte contínuo.</p>
                     </div>
                 </div>
+            </section>
+
+            <section className="cta-contact">
+                <h2>Interessado em Nossos Serviços?</h2>
+                <p>
+                    Se sua UBS ou Secretaria de Saúde deseja implementar ou melhorar seus sistemas e-SUS, estamos prontos para ajudar. 
+                    Entre em contato conosco para um orçamento personalizado.
+                </p>
+                <Link 
+                    to="/contact" 
+                    className="cta-button"
+                >
+                    Solicitar Orçamento
+                </Link>
             </section>
         </main>
     );

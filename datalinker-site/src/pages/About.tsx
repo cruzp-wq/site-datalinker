@@ -47,7 +47,7 @@ const About: React.FC = () => {
                 <div className="highlight">
                     <p>
                         A Datalinker possui <strong>projeto aprovado para expansão na cidade de
-                        Parnamirim/RN</strong>, com foco na implantação dos sistemas e-SUS e
+                            Parnamirim/RN</strong>, com foco na implantação dos sistemas e-SUS e
                         suporte técnico para as <strong>novas UBS que serão criadas no município</strong>.
                     </p>
                 </div>

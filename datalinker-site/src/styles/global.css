@@ -557,6 +557,50 @@ table tbody tr:hover {
 }
 
 /* ===========================
+   CTA CONTACT SECTION
+   =========================== */
+
+.cta-contact {
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.cta-contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.cta-contact p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #0066cc;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* ===========================
    RESPONSIVO
    =========================== */
 
@@ -569,8 +613,8 @@ table tbody tr:hover {
 
     /* reduzir logo em telas médias */
     .site-logo {
-        width: 96px;
-        height: 96px;
+        width: 150px;
+        height: 150px;
     }
 
     .header nav ul {
@@ -617,6 +661,26 @@ table tbody tr:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .cta-contact {
+        padding: 40px 20px !important;
+        margin: 20px 10px !important;
+    }
+
+    .cta-contact h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .cta-contact p {
+        font-size: 1rem !important;
+    }
+
+    .cta-contact a {
+        padding: 12px 30px !important;
+        font-size: 1rem !important;
+    }
+}
+
 @media (max-width: 480px) {
     .header h1 {
         font-size: 1.25rem;
@@ -624,8 +688,8 @@ table tbody tr:hover {
 
     /* logo ainda menor em dispositivos muito pequenos */
     .site-logo {
-        width: 56px;
-        height: 56px;
+        width: 120px;
+        height: 120px;
     }
 
     main {
@@ -648,6 +712,52 @@ table tbody tr:hover {
     .contact-info,
     .contact-form {
         padding: 1.5rem;
+    }
+
+    .cta-contact {
+        padding: 30px 15px !important;
+        margin: 15px 5px !important;
+        border-radius: 8px !important;
+    }
+
+    .cta-contact h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .cta-contact p {
+        font-size: 0.95rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    .cta-contact a {
+        padding: 10px 25px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .value-item {
+        padding: 15px !important;
+    }
+
+    .value-item img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem !important;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem !important;
     }
 }
 

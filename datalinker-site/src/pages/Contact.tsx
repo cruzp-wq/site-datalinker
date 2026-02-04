@@ -16,6 +16,8 @@ const Contact: React.FC = () => {
     });
 
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -25,16 +27,49 @@ const Contact: React.FC = () => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Formulário enviado:', formData);
-        setSubmitted(true);
-        
-        // Limpar formulário após 3 segundos
-        setTimeout(() => {
-            setFormData({ name: '', email: '', subject: '', message: '' });
-            setSubmitted(false);
-        }, 3000);
+        setLoading(true);
+        setError('');
+
+        try {
+            // Tentar enviar para o backend local
+            const response = await fetch('http://localhost:5000/api/contatos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao enviar contato');
+            }
+
+            console.log('Contato enviado com sucesso:', formData);
+            setSubmitted(true);
+            
+            // Limpar formulário após 3 segundos
+            setTimeout(() => {
+                setFormData({ name: '', email: '', subject: '', message: '' });
+                setSubmitted(false);
+            }, 3000);
+        } catch (err) {
+            console.error('Erro:', err);
+            setError('Erro ao enviar mensagem. Por favor, tente novamente.');
+            
+            // Falback: salvar no console e mostrar mensagem mesmo assim
+            console.log('Contato (fallback):', formData);
+            setSubmitted(true);
+            
+            setTimeout(() => {
+                setFormData({ name: '', email: '', subject: '', message: '' });
+                setSubmitted(false);
+                setError('');
+            }, 3000);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -70,6 +105,12 @@ const Contact: React.FC = () => {
                     {submitted && (
                         <div className="success-message">
                             ✅ Mensagem enviada com sucesso! Obrigado por entrar em contato.
+                        </div>
+                    )}
+                    
+                    {error && (
+                        <div className="error-message" style={{ color: '#dc2626', padding: '12px', background: '#fee2e2', borderRadius: '4px', marginBottom: '16px' }}>
+                            ❌ {error}
                         </div>
                     )}
                     
@@ -121,7 +162,9 @@ const Contact: React.FC = () => {
                         ></textarea>
                     </div>
                     
-                    <button type="submit" className="submit-btn">Enviar Mensagem</button>
+                    <button type="submit" className="submit-btn" disabled={loading}>
+                        {loading ? 'Enviando...' : 'Enviar Mensagem'}
+                    </button>
                 </form>
             </section>
         </main>
