@@ -10,7 +10,7 @@ import './styles/global.css';
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/site-datalinker/">
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -19,6 +19,16 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
+            {/* Botão WhatsApp Flutuante */}
+            <a
+                href="https://wa.me/5584997522344"
+                className="whatsapp-float"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Falar no WhatsApp"
+            >
+                💬
+            </a>
         </Router>
     );
 };
