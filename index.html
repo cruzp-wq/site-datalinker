@@ -12,6 +12,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        /* Override crítico para garantir contraste em hot cache / CDN edge antigo */
+        .hero, .hero h1, .hero p {
+            color: #ffffff !important;
+        }
+        .hero h1 {
+            font-size: 3.5rem !important;
+            font-weight: 700 !important;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.35) !important;
+        }
+        .hero p {
+            font-size: 1.5rem !important;
+            font-weight: 600 !important;
+            text-shadow: 0 1px 6px rgba(0,0,0,0.25) !important;
+        }
+        a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+        a:hover, a:focus {
+            color: #4da6ff !important;
+            text-decoration: none !important;
+        }
+        footer a, footer a:visited {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+    </style>
   <script type="module" crossorigin src="/site-datalinker/assets/index.ea0455f1.js"></script>
   <link rel="stylesheet" href="/site-datalinker/assets/index.c3ab282d.css">
 </head>
