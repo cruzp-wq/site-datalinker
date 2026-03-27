@@ -45,7 +45,43 @@
   <link rel="stylesheet" href="/site-datalinker/assets/index.bea02946.css">
 </head>
 <body>
+    <header id="static-header" style="display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1.5rem;background:rgba(255,255,255,0.95);border-bottom:1px solid #e2e8f0;position:fixed;top:0;left:0;right:0;z-index:2000;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+        <div style="display:flex;align-items:center;gap:0.65rem;">
+            <img src="/site-datalinker/logo.svg" alt="DataLinker" style="height:36px;width:auto;">
+            <span style="font-size:1.35rem;font-weight:700;color:#1e40af;">DataLinker</span>
+        </div>
+        <nav style="display:flex;gap:0.85rem;">
+            <a href="/#/" style="font-weight:600;color:#1e40af;text-decoration:none;padding:0.45rem 0.7rem;border-radius:8px;">Home</a>
+            <a href="/#/about" style="font-weight:600;color:#1e40af;text-decoration:none;padding:0.45rem 0.7rem;border-radius:8px;">Sobre Nós</a>
+            <a href="/#/services" style="font-weight:600;color:#1e40af;text-decoration:none;padding:0.45rem 0.7rem;border-radius:8px;">Serviços</a>
+            <a href="/#/team" style="font-weight:600;color:#1e40af;text-decoration:none;padding:0.45rem 0.7rem;border-radius:8px;">Equipe</a>
+            <a href="/#/contact" style="font-weight:600;color:#1e40af;text-decoration:none;padding:0.45rem 0.7rem;border-radius:8px;">Contato</a>
+        </nav>
+    </header>
+    <div style="height:74px;"></div>
     <div id="root"></div>
+    <script>
+        (function() {
+            try {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                        registrations.forEach(function(reg) { reg.unregister(); });
+                    });
+                }
+                if (!location.hash || location.hash === '') {
+                    location.replace(location.pathname + location.search + '#/');
+                }
+                window.addEventListener('load', function() {
+                    var sh = document.getElementById('static-header');
+                    if (sh) {
+                        sh.style.display = 'none';
+                    }
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        })();
+    </script>
     
 </body>
 </html>
