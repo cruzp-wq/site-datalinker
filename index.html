@@ -56,11 +56,44 @@
             color: #4da6ff !important;
             text-decoration: none !important;
         }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            z-index: 3000;
+        }
+
+        .preloader-spinner {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 6px solid #e6eefc;
+            border-top-color: #1e40af;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
-  <script type="module" crossorigin src="/site-datalinker/assets/index.dea01133.js"></script>
-  <link rel="stylesheet" href="/site-datalinker/assets/index.bea02946.css">
+    <meta name="theme-color" content="#1e40af">
+    <meta property="og:title" content="DataLinker - Especialistas em e-SUS para UBS">
+    <meta property="og:description" content="Especialistas em implantação e suporte do sistema e-SUS PEC para Unidades Básicas de Saúde.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+  <script type="module" crossorigin src="/site-datalinker/assets/index.38fce97b.js"></script>
+  <link rel="stylesheet" href="/site-datalinker/assets/index.533ee052.css">
 </head>
 <body>
+    <div id="preloader" aria-hidden="false">
+        <div class="preloader-spinner" aria-hidden="true"></div>
+    </div>
     <header id="static-header" style="display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1.5rem;background:rgba(255,255,255,0.95);border-bottom:1px solid #e2e8f0;position:fixed;top:0;left:0;right:0;z-index:2000;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
         <div style="display:flex;align-items:center;gap:0.65rem;">
             <img src="/site-datalinker/logo.svg" alt="DataLinker" style="height:36px;width:auto;">
@@ -89,8 +122,13 @@
                 }
                 window.addEventListener('load', function() {
                     var sh = document.getElementById('static-header');
+                    var pre = document.getElementById('preloader');
                     if (sh) {
                         sh.style.display = 'none';
+                    }
+                    if (pre) {
+                        pre.style.display = 'none';
+                        pre.setAttribute('aria-hidden', 'true');
                     }
                 });
             } catch (e) {
